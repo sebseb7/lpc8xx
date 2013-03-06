@@ -12,7 +12,9 @@ void delay_ms(uint32_t ms) {
 	while ((msTicks-now) < ms);
 }
 
-int main(void) {
+
+
+void main(void) {
 
 
 	SystemCoreClockUpdate();
