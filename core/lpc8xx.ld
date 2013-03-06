@@ -2,11 +2,11 @@ ENTRY(ResetISR)
 
 MEMORY
 {
-	sram	:	ORIGIN = 0x10000000, LENGTH = 8k
-	flash	:	ORIGIN = 0x00000000, LENGTH = 64k
+	sram	:	ORIGIN = 0x10000000, LENGTH = 4k
+	flash	:	ORIGIN = 0x00000000, LENGTH = 16k
 }
 
-_end_stack = 0x10001FF0;
+_end_stack = 0x10000FF0;
 
 SECTIONS {
 	. = ORIGIN(flash);
