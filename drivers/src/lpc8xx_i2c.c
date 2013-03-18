@@ -23,7 +23,7 @@
 * warranty that such application will be suitable for the specified
 * use without further testing or modification.
 * Permission to use, copy, modify, and distribute this software and its
-* documentation is hereby granted, under NXP Semiconductors’
+* documentation is hereby granted, under NXP Semiconductorsï¿½
 * relevant copyright in the software, without fee, provided that it
 * is used in conjunction with NXP Semiconductors microcontrollers.  This
 * copyright, permission, and disclaimer notice must appear in all copies of
@@ -31,7 +31,7 @@
 **********************************************************************/
 
 /* Includes ------------------------------------------------------------------- */
-#include "lpc8xx.h"
+#include "LPC8xx.h"
 #include "lpc8xx_nmi.h"
 #include "lpc8xx_i2c.h"
 

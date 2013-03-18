@@ -18,8 +18,8 @@
  * warranty that such application will be suitable for the specified
  * use without further testing or modification.
 ****************************************************************************/
-#include "lpc8xx.h"			/* LPC8xx Peripheral Registers */
-#include "lpc8XX_gpio.h"
+#include "LPC8xx.h"			/* LPC8xx Peripheral Registers */
+#include "lpc8xx_gpio.h"
 #include "lpc8xx_bod.h"
 
 volatile uint32_t bod_counter;
