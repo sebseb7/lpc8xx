@@ -54,6 +54,7 @@ clean:
 	$(REMOVE) $(PROJECT).elf
 	$(REMOVE) $(PROJECT).map
 
+
 #########################################################################
 
 %.o: %.c Makefile $(HEADERS)
@@ -62,7 +63,12 @@ clean:
 
 #########################################################################
 
+flash: all
+	-/Applications/lpcxpresso_5.1.2_2065/lpcxpresso/bin/dfu-util -d 0x471:0xdf55 -c 0 -t 2048 -R -D /Applications/lpcxpresso_5.1.2_2065/lpcxpresso/bin/LPCXpressoWIN.enc
+	sleep 1
+	/Applications/lpcxpresso_5.1.2_2065/lpcxpresso/bin/crt_emu_cm3_gen -wire=winusb -pLPC812 -vendor=NXP -flash-load-exec=firmware.bin
+	
 
 
-.PHONY : clean all 
+.PHONY : clean flash all 
 
