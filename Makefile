@@ -55,10 +55,10 @@ clean:
 	$(REMOVE) $(OBJECTS)
 	$(REMOVE) $(DEPS)
 	$(REMOVE) $(LSTFILES)
-	$(REMOVE) .bin/firmware.bin
+	$(REMOVE) firmware.bin
 	$(REMOVE) .bin/$(PROJECT).elf
-	rmdir .bin/core
-	rmdir .bin
+	-rmdir .bin/core
+	-rmdir .bin
 
 -include $(DEPS)
 
