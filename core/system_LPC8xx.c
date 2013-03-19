@@ -247,6 +247,7 @@ uint32_t SystemCoreClock = __SYSTEM_CLOCK;/*!< System Clock Frequency (Core Cloc
  * @brief  Setup the microcontroller system.
  *         Initialize the System.
  */
+__attribute__ ((section(".after_vectors")))
 void SystemInit (void) {
 
   /* System clock to the IOCON & the SWM need to be enabled or
