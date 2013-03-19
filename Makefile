@@ -14,15 +14,15 @@ LSSFILES= $(SRC:.c=.lst)
 HEADERS=$(wildcard core/*.h) $(wildcard *.h)
 
 #  Compiler Options
-GCFLAGS = -std=gnu99 -ffreestanding -mcpu=cortex-m0 -mthumb -O$(OPTIMIZATION) -I. -Icore 
+GCFLAGS = -std=gnu99 -ffreestanding -mcpu=cortex-m0plus -mthumb -O$(OPTIMIZATION) -I. -Icore 
 # Warnings
 GCFLAGS += -Wno-strict-aliasing -Wstrict-prototypes -Wundef -Wall -Wextra -Wunreachable-code 
 # Optimizazions
 GCFLAGS +=  -fstrict-aliasing -fsingle-precision-constant -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -fno-builtin -ffunction-sections -fno-common -fdata-sections
 # Debug stuff
-#GCFLAGS += -Wa,-adhlns=$(<:.c=.lst),-gstabs -g 
+GCFLAGS += -Wa,-adhlns=$(<:.c=.lst),-gstabs -g 
 
-LDFLAGS =  -mcpu=cortex-m0 -mthumb -O$(OPTIMIZATION) -nostartfiles  -T$(LDCRIPT) 
+LDFLAGS =  -mcpu=cortex-m0plus -mthumb -O$(OPTIMIZATION) -nostartfiles  -T$(LDCRIPT) 
 
 
 #  Compiler/Linker Paths
