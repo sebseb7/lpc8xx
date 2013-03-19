@@ -2,27 +2,27 @@ PROJECT=template
 
 LDCRIPT=core/lpc8xx.ld
 
-OPTIMIZATION = 1
+OPTIMIZATION = s
 
 #########################################################################
 
-SRC=$(wildcard core/*.c) $(wildcard *.c)
+SRC=$(wildcard core/*.c) $(wildcard *.c) 
 
 
 OBJECTS= $(SRC:.c=.o) 
+DEPS= $(SRC:.c=.d) 
 LSSFILES= $(SRC:.c=.lst) 
-HEADERS=$(wildcard core/*.h) $(wildcard *.h)
 
 #  Compiler Options
-GCFLAGS = -std=gnu99 -ffreestanding -mcpu=cortex-m0plus -mthumb -O$(OPTIMIZATION) -I. -Icore 
+GCFLAGS = -std=gnu99  -mcpu=cortex-m0plus -mthumb -O$(OPTIMIZATION) -I. -Icore -Idrivers/inc
 # Warnings
 GCFLAGS += -Wno-strict-aliasing -Wstrict-prototypes -Wundef -Wall -Wextra -Wunreachable-code 
 # Optimizazions
-GCFLAGS +=  -fstrict-aliasing -fsingle-precision-constant -funsigned-char -funsigned-bitfields -fpack-struct -fshort-enums -fno-builtin -ffunction-sections -fno-common -fdata-sections
+GCFLAGS +=  -fstrict-aliasing -fsingle-precision-constant -funsigned-char -funsigned-bitfields -fshort-enums -fno-builtin -ffunction-sections -fno-common -fdata-sections 
 # Debug stuff
-GCFLAGS += -Wa,-adhlns=$(<:.c=.lst),-gstabs -g 
+GCFLAGS += -Wa,-adhlns=$(<:.c=.lst) -g
 
-LDFLAGS =  -mcpu=cortex-m0plus -mthumb -O$(OPTIMIZATION) -nostartfiles  -T$(LDCRIPT) 
+LDFLAGS = -T$(LDCRIPT) -nostartfiles  -Wl,--gc-section 
 
 
 #  Compiler/Linker Paths
@@ -33,6 +33,7 @@ SIZE = arm-none-eabi-size
 
 #########################################################################
 
+
 all: firmware.bin Makefile stats
 
 
@@ -41,7 +42,7 @@ firmware.bin: $(PROJECT).elf Makefile
 
 $(PROJECT).elf: $(OBJECTS) Makefile
 	@echo "  \033[1;34mLD \033[0m (\033[1;33m $(OBJECTS)\033[0m) -> $(PROJECT).elf"
-	@$(GCC) $(LDFLAGS) $(OBJECTS) -o $(PROJECT).elf -lm
+	@$(GCC) -o $(PROJECT).elf $(OBJECTS) $(GCFLAGS) $(LDFLAGS) 
 	arm-none-eabi-strip -s $(PROJECT).elf
 
 stats: $(PROJECT).elf Makefile
@@ -49,17 +50,26 @@ stats: $(PROJECT).elf Makefile
 
 clean:
 	$(REMOVE) $(OBJECTS)
+	$(REMOVE) $(DEPS)
 	$(REMOVE) $(LSSFILES)
 	$(REMOVE) firmware.bin
 	$(REMOVE) $(PROJECT).elf
 	$(REMOVE) $(PROJECT).map
 
+-include $(DEPS)
 
 #########################################################################
 
-%.o: %.c Makefile $(HEADERS)
+%.o: %.c Makefile 
 	@echo "  \033[1;34mGCC\033[0m $<"
 	@$(GCC) $(GCFLAGS) -o $@ -c $<
+	@$(GCC) $(GCFLAGS) -MM $< > $*.d
+	@mv -f $*.d $*.d.tmp
+	@sed -e 's|.*:|$*.o:|' < $*.d.tmp > $*.d
+	@sed -e 's/.*://' -e 's/\\$$//' < $*.d.tmp | fmt -1 | \
+		sed -e 's/^ *//' -e 's/$$/:/' >> $*.d
+	@rm -f $*.d.tmp
+					
 
 #########################################################################
 
