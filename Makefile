@@ -9,9 +9,9 @@ OPTIMIZATION = s
 SRC=$(wildcard core/*.c) $(wildcard *.c) 
 
 
-OBJECTS= $(SRC:.c=.o) 
-DEPS= $(SRC:.c=.d) 
-LSSFILES= $(SRC:.c=.lst) 
+OBJECTS=$(patsubst %,.bin/%,$(SRC:.c=.o))
+DEPS=$(patsubst %,.bin/%,$(SRC:.c=.d))
+LSTFILES=$(patsubst %,.bin/%,$(SRC:.c=.lst))
 
 #  Compiler Options
 GCFLAGS = -std=gnu99  -mcpu=cortex-m0plus -mthumb -O$(OPTIMIZATION) -I. -Icore -Idrivers/inc
@@ -20,7 +20,7 @@ GCFLAGS += -Wno-strict-aliasing -Wstrict-prototypes -Wundef -Wall -Wextra -Wunre
 # Optimizazions
 GCFLAGS +=  -fstrict-aliasing -fsingle-precision-constant -funsigned-char -funsigned-bitfields -fshort-enums -fno-builtin -ffunction-sections -fno-common -fdata-sections 
 # Debug stuff
-GCFLAGS += -Wa,-adhlns=$(<:.c=.lst) -g
+GCFLAGS += -Wa,-adhlns=.bin/$(<:.c=.lst) -g
 
 LDFLAGS = -T$(LDCRIPT) -nostartfiles  -Wl,--gc-section 
 
@@ -34,40 +34,44 @@ SIZE = arm-none-eabi-size
 #########################################################################
 
 
-all: firmware.bin Makefile stats
+all: .bin .bin/core firmware.bin Makefile stats
 
+.bin:
+	mkdir .bin
+.bin/core:
+	mkdir .bin/core
 
-firmware.bin: $(PROJECT).elf Makefile
-	$(OBJCOPY) -R .stack -O binary $(PROJECT).elf firmware.bin
+firmware.bin: .bin/$(PROJECT).elf Makefile
+	$(OBJCOPY) -R .stack -O binary .bin/$(PROJECT).elf firmware.bin
 
-$(PROJECT).elf: $(OBJECTS) Makefile
+.bin/$(PROJECT).elf: $(OBJECTS) Makefile
 	@echo "  \033[1;34mLD \033[0m (\033[1;33m $(OBJECTS)\033[0m) -> $(PROJECT).elf"
-	@$(GCC) -o $(PROJECT).elf $(OBJECTS) $(GCFLAGS) $(LDFLAGS) 
-	arm-none-eabi-strip -s $(PROJECT).elf
+	@$(GCC) -o .bin/$(PROJECT).elf $(OBJECTS) $(GCFLAGS) $(LDFLAGS) 
+	arm-none-eabi-strip -s .bin/$(PROJECT).elf
 
-stats: $(PROJECT).elf Makefile
-	$(SIZE) $(PROJECT).elf
+stats: .bin/$(PROJECT).elf Makefile
+	$(SIZE) .bin/$(PROJECT).elf
 
 clean:
 	$(REMOVE) $(OBJECTS)
 	$(REMOVE) $(DEPS)
-	$(REMOVE) $(LSSFILES)
-	$(REMOVE) firmware.bin
-	$(REMOVE) $(PROJECT).elf
-	$(REMOVE) $(PROJECT).map
+	$(REMOVE) $(LSTFILES)
+	$(REMOVE) .bin/firmware.bin
+	$(REMOVE) .bin/$(PROJECT).elf
+	rmdir .bin/core
+	rmdir .bin
 
 -include $(DEPS)
 
 #########################################################################
 
-%.o: %.c Makefile 
+.bin/%.o: %.c Makefile 
 	@echo "  \033[1;34mGCC\033[0m $<"
 	@$(GCC) $(GCFLAGS) -o $@ -c $<
-	@$(GCC) $(GCFLAGS) -MM $< > $*.d
-	@mv -f $*.d $*.d.tmp
-	@sed -e 's|.*:|$*.o:|' < $*.d.tmp > $*.d
+	@$(GCC) $(GCFLAGS) -MM $< > $*.d.tmp
+	@sed -e 's|.*:|$*.o:|' < $*.d.tmp > .bin/$*.d
 	@sed -e 's/.*://' -e 's/\\$$//' < $*.d.tmp | fmt -1 | \
-		sed -e 's/^ *//' -e 's/$$/:/' >> $*.d
+		sed -e 's/^ *//' -e 's/$$/:/' >> .bin/$*.d
 	@rm -f $*.d.tmp
 					
 

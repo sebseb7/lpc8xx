@@ -1,5 +1,2 @@
-*.o
-*.d
-*.lst
-*.bin
-*.elf
+.bin
+firmware.bin
