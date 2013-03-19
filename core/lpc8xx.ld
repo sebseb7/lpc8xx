@@ -32,15 +32,6 @@ SECTIONS
         
         *(.after_vectors*)
         
-        /* Code Read Protect data */
-/*        . = 0x000002FC ;
-        PROVIDE(__CRP_WORD_START__ = .) ;
-        KEEP(*(.crp))
-        PROVIDE(__CRP_WORD_END__ = .) ;
-        ASSERT(!(__CRP_WORD_START__ == __CRP_WORD_END__), "Linker CRP Enabled, but no CRP_WORD provided within application");
-*/
-        /* End of Code Read Protect */
-        
         *(.text*)
         *(.rodata .rodata.*)
         . = ALIGN(4);
@@ -74,15 +65,6 @@ SECTIONS
         PROVIDE(end = .);
     } > RamLoc4
         
-    
-    /* DEFAULT NOINIT SECTION */
-    .noinit (NOLOAD): ALIGN(4)
-    {
-        _noinit = .;
-        *(.noinit*) 
-         . = ALIGN(4) ;
-        _end_noinit = .;
-    } > RamLoc4
     
     PROVIDE(_pvHeapStart = .);
     PROVIDE(_vStackTop = __top_RamLoc4 - 0);
