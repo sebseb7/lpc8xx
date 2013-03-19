@@ -10,9 +10,6 @@
  *       In ISP mode, pin PIO0_0 is connected to function U0_RXD and pin PIO0_4 is connected to function U0_TXD on the USART0 block.
  */
 
-//__attribute__ ((section(".crp"))) const unsigned int CRP_WORD = 0xFFFFFFFF;
-
-
 volatile uint32_t msTicks = 0;
 
 void SysTick_Handler(void) {
@@ -24,12 +21,11 @@ void delay_ms(uint32_t ms) {
 	while ((msTicks-now) < ms);
 }
 
-#define LED 7        // red LED
+#define LED 7        
 
+int main(void) {
 
-void main(void) {
-
-	SysTick_Config(SystemCoreClock/1000);
+	SysTick_Config(12000);// 12Mhz / 1000
 
 
 	LPC_GPIO_PORT->DIR0 |= 1<<LED;    // set pin as output
