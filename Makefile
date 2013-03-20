@@ -13,7 +13,7 @@ DEPS=$(patsubst %,.bin/%,$(SRC:.c=.d))
 LSTFILES=$(patsubst %,.bin/%,$(SRC:.c=.lst))
 
 #  Compiler Options
-GCFLAGS = -std=gnu99  -mcpu=cortex-m0plus -mthumb -O$(OPTIMIZATION) -I. -Icore -Idrivers/inc
+GCFLAGS = -std=gnu99  -mcpu=cortex-m0 -mthumb -O$(OPTIMIZATION) -I. -Icore -Idrivers/inc
 # Warnings
 GCFLAGS += -Wno-strict-aliasing -Wstrict-prototypes -Wundef -Wall -Wextra -Wunreachable-code 
 # Optimizazions
@@ -76,9 +76,10 @@ clean:
 #########################################################################
 
 flash: all
-	-/Applications/lpcxpresso_5.1.2_2065/lpcxpresso/bin/dfu-util -d 0x471:0xdf55 -c 0 -t 2048 -R -D /Applications/lpcxpresso_5.1.2_2065/lpcxpresso/bin/LPCXpressoWIN.enc
-	sleep 1
-	/Applications/lpcxpresso_5.1.2_2065/lpcxpresso/bin/crt_emu_cm3_gen -wire=winusb -pLPC812 -vendor=NXP -flash-load-exec=firmware.bin
+	tools/isp.py
+#	-/Applications/lpcxpresso_5.1.2_2065/lpcxpresso/bin/dfu-util -d 0x471:0xdf55 -c 0 -t 2048 -R -D /Applications/lpcxpresso_5.1.2_2065/lpcxpresso/bin/LPCXpressoWIN.enc
+#	sleep 1
+#	/Applications/lpcxpresso_5.1.2_2065/lpcxpresso/bin/crt_emu_cm3_gen -wire=winusb -pLPC812 -vendor=NXP -flash-load-exec=firmware.bin
 	
 
 
