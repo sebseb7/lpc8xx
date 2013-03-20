@@ -13,7 +13,7 @@ DEPS=$(patsubst %,.bin/%,$(SRC:.c=.d))
 LSTFILES=$(patsubst %,.bin/%,$(SRC:.c=.lst))
 
 #  Compiler Options
-GCFLAGS = -std=gnu99  -mcpu=cortex-m0 -mthumb -O$(OPTIMIZATION) -I. -Icore -Idrivers/inc
+GCFLAGS = -std=gnu99  -mcpu=cortex-m0plus -mthumb -O$(OPTIMIZATION) -I. -Icore -Idrivers/inc
 # Warnings
 GCFLAGS += -Wno-strict-aliasing -Wstrict-prototypes -Wundef -Wall -Wextra -Wunreachable-code 
 # Optimizazions
@@ -57,8 +57,8 @@ clean:
 	$(REMOVE) $(LSTFILES)
 	$(REMOVE) firmware.bin
 	$(REMOVE) .bin/$(PROJECT).elf
-	-rmdir .bin/core
-	-rmdir .bin
+	-rm -d -f .bin/core
+	-rm -d -f .bin
 
 -include $(DEPS)
 
