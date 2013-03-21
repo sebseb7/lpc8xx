@@ -1,10 +1,12 @@
-PROJECT=template
-
-LDCRIPT=core/lpc8xx.ld
-
 OPTIMIZATION = s
 
+# lpc810 / lpc811 / lpc812
+MCU=lpc812
+
 #########################################################################
+PROJECT=template
+LDSCRIPT=core/$(MCU).ld
+
 
 SRC=$(wildcard core/*.c) $(wildcard *.c) 
 
@@ -21,7 +23,7 @@ GCFLAGS +=  -fstrict-aliasing -fsingle-precision-constant -funsigned-char -funsi
 # Debug stuff
 GCFLAGS += -Wa,-adhlns=.bin/$(<:.c=.lst) -g
 
-LDFLAGS = -T$(LDCRIPT) -nostartfiles  -Wl,--gc-section 
+LDFLAGS = -T$(LDSCRIPT) -nostartfiles  -Wl,--gc-section 
 
 #  Compiler/Linker Paths
 GCC = arm-none-eabi-gcc
@@ -44,7 +46,7 @@ firmware.bin: .bin/$(PROJECT).elf Makefile
 	@$(OBJCOPY) -R .stack -O binary .bin/$(PROJECT).elf firmware.bin
 
 .bin/$(PROJECT).elf: $(OBJECTS) Makefile
-	@echo "  \033[1;34mLD \033[0m (\033[1;33m $(OBJECTS)\033[0m) -> $(PROJECT).elf"
+	@echo "  \033[1;34mLD \033[0m (\033[1;33m$(OBJECTS)\033[0m) -> $(PROJECT).elf"
 	@$(GCC) -o .bin/$(PROJECT).elf $(OBJECTS) $(GCFLAGS) $(LDFLAGS) 
 	@arm-none-eabi-strip -s .bin/$(PROJECT).elf
 
@@ -52,13 +54,14 @@ stats: .bin/$(PROJECT).elf
 	@$(SIZE) .bin/$(PROJECT).elf
 
 clean:
-	$(REMOVE) $(OBJECTS)
-	$(REMOVE) $(DEPS)
-	$(REMOVE) $(LSTFILES)
-	$(REMOVE) firmware.bin
-	$(REMOVE) .bin/$(PROJECT).elf
-	-rmdir .bin/core
-	-rmdir .bin
+	@echo "  \033[1;34mCleanup\033[0m $<"
+	@$(REMOVE) $(OBJECTS)
+	@$(REMOVE) $(DEPS)
+	@$(REMOVE) $(LSTFILES)
+	@$(REMOVE) firmware.bin
+	@$(REMOVE) .bin/$(PROJECT).elf
+	@$(REMOVE) -d .bin/core
+	@$(REMOVE) -d .bin
 
 -include $(DEPS)
 
