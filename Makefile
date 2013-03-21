@@ -48,7 +48,6 @@ firmware.bin: .bin/$(PROJECT).elf Makefile
 .bin/$(PROJECT).elf: $(OBJECTS) Makefile
 	@echo "  \033[1;34mLD \033[0m (\033[1;33m$(OBJECTS)\033[0m) -> $(PROJECT).elf"
 	@$(GCC) -o .bin/$(PROJECT).elf $(OBJECTS) $(GCFLAGS) $(LDFLAGS) 
-	@arm-none-eabi-strip -s .bin/$(PROJECT).elf
 
 stats: .bin/$(PROJECT).elf 
 	@$(SIZE) .bin/$(PROJECT).elf
@@ -83,8 +82,12 @@ flash: all
 #	-/Applications/lpcxpresso_5.1.2_2065/lpcxpresso/bin/dfu-util -d 0x471:0xdf55 -c 0 -t 2048 -R -D /Applications/lpcxpresso_5.1.2_2065/lpcxpresso/bin/LPCXpressoWIN.enc
 #	sleep 1
 #	/Applications/lpcxpresso_5.1.2_2065/lpcxpresso/bin/crt_emu_cm3_gen -wire=winusb -pLPC812 -vendor=NXP -flash-load-exec=firmware.bin
-	
+
+debug: all
+	-/Applications/lpcxpresso_5.1.2_2065/lpcxpresso/bin/dfu-util -d 0x471:0xdf55 -c 0 -t 2048 -R -D /Applications/lpcxpresso_5.1.2_2065/lpcxpresso/bin/LPCXpressoWIN.enc
+	sleep 1
+	arm-none-eabi-gdb --eval-command="target extended-remote |/Applications/lpcxpresso_5.1.2_2065/lpcxpresso/bin/crt_emu_cm3_gen -wire=winusb -pLPC812 -vendor=NXP" .bin/$(PROJECT).elf
 
 
-.PHONY : clean all flash stats
+.PHONY : clean all flash stats debug
 
