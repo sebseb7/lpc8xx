@@ -514,6 +514,445 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <text x="-2.7" y="4" size="0.8" layer="25" font="vector" ratio="10">&gt;NAME</text>
 <text x="-2.7" y="-5" size="0.8" layer="27" font="vector" ratio="10">&gt;VALUE</text>
 </package>
+<package name="MAKE-DD_LOGO">
+<polygon width="0" layer="21">
+<vertex x="0.31" y="0.57"/>
+<vertex x="0.31" y="1.56"/>
+<vertex x="1.56" y="1.56" curve="-90"/>
+<vertex x="1.76" y="1.36"/>
+<vertex x="1.76" y="0.57"/>
+<vertex x="1.51" y="0.57"/>
+<vertex x="1.51" y="1.31"/>
+<vertex x="1.16" y="1.31"/>
+<vertex x="1.16" y="0.57"/>
+<vertex x="0.91" y="0.57"/>
+<vertex x="0.91" y="1.31"/>
+<vertex x="0.56" y="1.31"/>
+<vertex x="0.56" y="0.57"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="2" y="1.56"/>
+<vertex x="2.8" y="1.56" curve="-90"/>
+<vertex x="3" y="1.36"/>
+<vertex x="3" y="0.58"/>
+<vertex x="2.75" y="0.58"/>
+<vertex x="2.75" y="0.97"/>
+<vertex x="2.26" y="0.97"/>
+<vertex x="2.26" y="0.82"/>
+<vertex x="2.75" y="0.82"/>
+<vertex x="2.75" y="0.58"/>
+<vertex x="2.15" y="0.58" curve="-90"/>
+<vertex x="2" y="0.73"/>
+<vertex x="2" y="1.19"/>
+<vertex x="2.75" y="1.19"/>
+<vertex x="2.75" y="1.32"/>
+<vertex x="2" y="1.32"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="3.2" y="0.58"/>
+<vertex x="3.2" y="1.89"/>
+<vertex x="3.45" y="1.89"/>
+<vertex x="3.45" y="1.2"/>
+<vertex x="3.61" y="1.2"/>
+<vertex x="3.94" y="1.56"/>
+<vertex x="4.19" y="1.56"/>
+<vertex x="4.19" y="1.47"/>
+<vertex x="3.82" y="1.07"/>
+<vertex x="4.19" y="0.67"/>
+<vertex x="4.19" y="0.57"/>
+<vertex x="3.94" y="0.57"/>
+<vertex x="3.59" y="0.94"/>
+<vertex x="3.45" y="0.94"/>
+<vertex x="3.45" y="0.58"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="5.32" y="0.58"/>
+<vertex x="4.47" y="0.58" curve="-90"/>
+<vertex x="4.32" y="0.73"/>
+<vertex x="4.32" y="1.17"/>
+<vertex x="5.07" y="1.17"/>
+<vertex x="5.07" y="1.32"/>
+<vertex x="4.57" y="1.32"/>
+<vertex x="4.57" y="1.17"/>
+<vertex x="4.32" y="1.17"/>
+<vertex x="4.32" y="1.39" curve="-90"/>
+<vertex x="4.49" y="1.56"/>
+<vertex x="5.13" y="1.56" curve="-90"/>
+<vertex x="5.32" y="1.37"/>
+<vertex x="5.32" y="0.95"/>
+<vertex x="4.57" y="0.95"/>
+<vertex x="4.57" y="0.82"/>
+<vertex x="5.32" y="0.82"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="5.45" y="0.95"/>
+<vertex x="5.45" y="1.2"/>
+<vertex x="6.16" y="1.2"/>
+<vertex x="6.16" y="0.95"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="7.29" y="0.58"/>
+<vertex x="6.45" y="0.58" curve="-90"/>
+<vertex x="6.29" y="0.74"/>
+<vertex x="6.29" y="1.37" curve="-90"/>
+<vertex x="6.48" y="1.56"/>
+<vertex x="7.03" y="1.56"/>
+<vertex x="7.03" y="1.88"/>
+<vertex x="7.29" y="1.88"/>
+<vertex x="7.29" y="1.31"/>
+<vertex x="6.54" y="1.31"/>
+<vertex x="6.54" y="0.83"/>
+<vertex x="7.03" y="0.83"/>
+<vertex x="7.03" y="1.31"/>
+<vertex x="7.29" y="1.31"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="8.45" y="0.58"/>
+<vertex x="7.61" y="0.58" curve="-90"/>
+<vertex x="7.45" y="0.74"/>
+<vertex x="7.45" y="1.37" curve="-90"/>
+<vertex x="7.64" y="1.56"/>
+<vertex x="8.19" y="1.56"/>
+<vertex x="8.19" y="1.88"/>
+<vertex x="8.45" y="1.88"/>
+<vertex x="8.45" y="1.31"/>
+<vertex x="7.7" y="1.31"/>
+<vertex x="7.7" y="0.83"/>
+<vertex x="8.19" y="0.83"/>
+<vertex x="8.19" y="1.31"/>
+<vertex x="8.45" y="1.31"/>
+</polygon>
+</package>
+<package name="MAKE-DD_LOGO_URL">
+<polygon width="0" layer="21">
+<vertex x="0" y="0"/>
+<vertex x="0" y="0.99"/>
+<vertex x="1.25" y="0.99" curve="-90"/>
+<vertex x="1.45" y="0.79"/>
+<vertex x="1.45" y="0"/>
+<vertex x="1.2" y="0"/>
+<vertex x="1.2" y="0.74"/>
+<vertex x="0.85" y="0.74"/>
+<vertex x="0.85" y="0"/>
+<vertex x="0.6" y="0"/>
+<vertex x="0.6" y="0.74"/>
+<vertex x="0.25" y="0.74"/>
+<vertex x="0.25" y="0"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="1.69" y="0.99"/>
+<vertex x="2.49" y="0.99" curve="-90"/>
+<vertex x="2.69" y="0.79"/>
+<vertex x="2.69" y="0.01"/>
+<vertex x="2.44" y="0.01"/>
+<vertex x="2.44" y="0.4"/>
+<vertex x="1.95" y="0.4"/>
+<vertex x="1.95" y="0.25"/>
+<vertex x="2.44" y="0.25"/>
+<vertex x="2.44" y="0.01"/>
+<vertex x="1.84" y="0.01" curve="-90"/>
+<vertex x="1.69" y="0.16"/>
+<vertex x="1.69" y="0.62"/>
+<vertex x="2.44" y="0.62"/>
+<vertex x="2.44" y="0.75"/>
+<vertex x="1.69" y="0.75"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="2.89" y="0.01"/>
+<vertex x="2.89" y="1.32"/>
+<vertex x="3.14" y="1.32"/>
+<vertex x="3.14" y="0.63"/>
+<vertex x="3.3" y="0.63"/>
+<vertex x="3.63" y="0.99"/>
+<vertex x="3.88" y="0.99"/>
+<vertex x="3.88" y="0.9"/>
+<vertex x="3.51" y="0.5"/>
+<vertex x="3.88" y="0.1"/>
+<vertex x="3.88" y="0"/>
+<vertex x="3.63" y="0"/>
+<vertex x="3.28" y="0.37"/>
+<vertex x="3.14" y="0.37"/>
+<vertex x="3.14" y="0.01"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="5.01" y="0.01"/>
+<vertex x="4.16" y="0.01" curve="-90"/>
+<vertex x="4.01" y="0.16"/>
+<vertex x="4.01" y="0.6"/>
+<vertex x="4.76" y="0.6"/>
+<vertex x="4.76" y="0.75"/>
+<vertex x="4.26" y="0.75"/>
+<vertex x="4.26" y="0.6"/>
+<vertex x="4.01" y="0.6"/>
+<vertex x="4.01" y="0.82" curve="-90"/>
+<vertex x="4.18" y="0.99"/>
+<vertex x="4.82" y="0.99" curve="-90"/>
+<vertex x="5.01" y="0.8"/>
+<vertex x="5.01" y="0.38"/>
+<vertex x="4.26" y="0.38"/>
+<vertex x="4.26" y="0.25"/>
+<vertex x="5.01" y="0.25"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="5.14" y="0.38"/>
+<vertex x="5.14" y="0.63"/>
+<vertex x="5.85" y="0.63"/>
+<vertex x="5.85" y="0.38"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="6.98" y="0.01"/>
+<vertex x="6.14" y="0.01" curve="-90"/>
+<vertex x="5.98" y="0.17"/>
+<vertex x="5.98" y="0.8" curve="-90"/>
+<vertex x="6.17" y="0.99"/>
+<vertex x="6.72" y="0.99"/>
+<vertex x="6.72" y="1.31"/>
+<vertex x="6.98" y="1.31"/>
+<vertex x="6.98" y="0.74"/>
+<vertex x="6.23" y="0.74"/>
+<vertex x="6.23" y="0.26"/>
+<vertex x="6.72" y="0.26"/>
+<vertex x="6.72" y="0.74"/>
+<vertex x="6.98" y="0.74"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="8.14" y="0.01"/>
+<vertex x="7.3" y="0.01" curve="-90"/>
+<vertex x="7.14" y="0.17"/>
+<vertex x="7.14" y="0.8" curve="-90"/>
+<vertex x="7.33" y="0.99"/>
+<vertex x="7.88" y="0.99"/>
+<vertex x="7.88" y="1.31"/>
+<vertex x="8.14" y="1.31"/>
+<vertex x="8.14" y="0.74"/>
+<vertex x="7.39" y="0.74"/>
+<vertex x="7.39" y="0.26"/>
+<vertex x="7.88" y="0.26"/>
+<vertex x="7.88" y="0.74"/>
+<vertex x="8.14" y="0.74"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="8.27" y="0.01"/>
+<vertex x="8.27" y="0.26"/>
+<vertex x="8.52" y="0.26"/>
+<vertex x="8.52" y="0.01"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="9.65" y="0.01"/>
+<vertex x="8.81" y="0.01" curve="-90"/>
+<vertex x="8.65" y="0.17"/>
+<vertex x="8.65" y="0.8" curve="-90"/>
+<vertex x="8.84" y="0.99"/>
+<vertex x="9.39" y="0.99"/>
+<vertex x="9.39" y="1.31"/>
+<vertex x="9.65" y="1.31"/>
+<vertex x="9.65" y="0.74"/>
+<vertex x="8.9" y="0.74"/>
+<vertex x="8.9" y="0.26"/>
+<vertex x="9.39" y="0.26"/>
+<vertex x="9.39" y="0.74"/>
+<vertex x="9.65" y="0.74"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="10.81" y="0.01"/>
+<vertex x="9.96" y="0.01" curve="-90"/>
+<vertex x="9.81" y="0.16"/>
+<vertex x="9.81" y="0.6"/>
+<vertex x="10.56" y="0.6"/>
+<vertex x="10.56" y="0.75"/>
+<vertex x="10.06" y="0.75"/>
+<vertex x="10.06" y="0.6"/>
+<vertex x="9.81" y="0.6"/>
+<vertex x="9.81" y="0.82" curve="-90"/>
+<vertex x="9.98" y="0.99"/>
+<vertex x="10.62" y="0.99" curve="-90"/>
+<vertex x="10.81" y="0.8"/>
+<vertex x="10.81" y="0.38"/>
+<vertex x="10.06" y="0.38"/>
+<vertex x="10.06" y="0.25"/>
+<vertex x="10.81" y="0.25"/>
+</polygon>
+</package>
+<package name="MAKE-DD_LOGO_PROMPT">
+<polygon width="0" layer="21">
+<vertex x="2.095" y="0"/>
+<vertex x="2.095" y="0.99"/>
+<vertex x="3.345" y="0.99" curve="-90"/>
+<vertex x="3.545" y="0.79"/>
+<vertex x="3.545" y="0"/>
+<vertex x="3.295" y="0"/>
+<vertex x="3.295" y="0.74"/>
+<vertex x="2.945" y="0.74"/>
+<vertex x="2.945" y="0"/>
+<vertex x="2.695" y="0"/>
+<vertex x="2.695" y="0.74"/>
+<vertex x="2.345" y="0.74"/>
+<vertex x="2.345" y="0"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="3.785" y="0.99"/>
+<vertex x="4.585" y="0.99" curve="-90"/>
+<vertex x="4.785" y="0.79"/>
+<vertex x="4.785" y="0.01"/>
+<vertex x="4.535" y="0.01"/>
+<vertex x="4.535" y="0.4"/>
+<vertex x="4.045" y="0.4"/>
+<vertex x="4.045" y="0.25"/>
+<vertex x="4.535" y="0.25"/>
+<vertex x="4.535" y="0.01"/>
+<vertex x="3.935" y="0.01" curve="-90"/>
+<vertex x="3.785" y="0.16"/>
+<vertex x="3.785" y="0.62"/>
+<vertex x="4.535" y="0.62"/>
+<vertex x="4.535" y="0.75"/>
+<vertex x="3.785" y="0.75"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="4.985" y="0.01"/>
+<vertex x="4.985" y="1.32"/>
+<vertex x="5.235" y="1.32"/>
+<vertex x="5.235" y="0.63"/>
+<vertex x="5.395" y="0.63"/>
+<vertex x="5.725" y="0.99"/>
+<vertex x="5.975" y="0.99"/>
+<vertex x="5.975" y="0.9"/>
+<vertex x="5.605" y="0.5"/>
+<vertex x="5.975" y="0.1"/>
+<vertex x="5.975" y="0"/>
+<vertex x="5.725" y="0"/>
+<vertex x="5.375" y="0.37"/>
+<vertex x="5.235" y="0.37"/>
+<vertex x="5.235" y="0.01"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="7.105" y="0.01"/>
+<vertex x="6.255" y="0.01" curve="-90"/>
+<vertex x="6.105" y="0.16"/>
+<vertex x="6.105" y="0.6"/>
+<vertex x="6.855" y="0.6"/>
+<vertex x="6.855" y="0.75"/>
+<vertex x="6.355" y="0.75"/>
+<vertex x="6.355" y="0.6"/>
+<vertex x="6.105" y="0.6"/>
+<vertex x="6.105" y="0.82" curve="-90"/>
+<vertex x="6.275" y="0.99"/>
+<vertex x="6.915" y="0.99" curve="-90"/>
+<vertex x="7.105" y="0.8"/>
+<vertex x="7.105" y="0.38"/>
+<vertex x="6.355" y="0.38"/>
+<vertex x="6.355" y="0.25"/>
+<vertex x="7.105" y="0.25"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="7.854" y="0.38"/>
+<vertex x="7.854" y="0.63"/>
+<vertex x="8.564" y="0.63"/>
+<vertex x="8.564" y="0.38"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="9.694" y="0.01"/>
+<vertex x="8.854" y="0.01" curve="-90"/>
+<vertex x="8.694" y="0.17"/>
+<vertex x="8.694" y="0.8" curve="-90"/>
+<vertex x="8.884" y="0.99"/>
+<vertex x="9.434" y="0.99"/>
+<vertex x="9.434" y="1.31"/>
+<vertex x="9.694" y="1.31"/>
+<vertex x="9.694" y="0.74"/>
+<vertex x="8.944" y="0.74"/>
+<vertex x="8.944" y="0.26"/>
+<vertex x="9.434" y="0.26"/>
+<vertex x="9.434" y="0.74"/>
+<vertex x="9.694" y="0.74"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="10.854" y="0.01"/>
+<vertex x="10.014" y="0.01" curve="-90"/>
+<vertex x="9.854" y="0.17"/>
+<vertex x="9.854" y="0.8" curve="-90"/>
+<vertex x="10.044" y="0.99"/>
+<vertex x="10.594" y="0.99"/>
+<vertex x="10.594" y="1.31"/>
+<vertex x="10.854" y="1.31"/>
+<vertex x="10.854" y="0.74"/>
+<vertex x="10.104" y="0.74"/>
+<vertex x="10.104" y="0.26"/>
+<vertex x="10.594" y="0.26"/>
+<vertex x="10.594" y="0.74"/>
+<vertex x="10.854" y="0.74"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="-0.156" y="0.398"/>
+<vertex x="-0.156" y="0.606"/>
+<vertex x="-0.104" y="0.632"/>
+<vertex x="-0.065" y="0.645"/>
+<vertex x="0.052" y="0.645"/>
+<vertex x="0.156" y="0.619"/>
+<vertex x="0.208" y="0.593"/>
+<vertex x="0.273" y="0.554"/>
+<vertex x="0.325" y="0.541"/>
+<vertex x="0.377" y="0.541"/>
+<vertex x="0.403" y="0.554"/>
+<vertex x="0.481" y="0.606"/>
+<vertex x="0.481" y="0.398"/>
+<vertex x="0.416" y="0.372"/>
+<vertex x="0.364" y="0.359"/>
+<vertex x="0.299" y="0.359"/>
+<vertex x="0.234" y="0.372"/>
+<vertex x="0.182" y="0.385"/>
+<vertex x="0.13" y="0.424"/>
+<vertex x="0.065" y="0.45"/>
+<vertex x="0.026" y="0.463"/>
+<vertex x="-0.039" y="0.463"/>
+<vertex x="-0.117" y="0.424"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="1.383" y="-0.169"/>
+<vertex x="1.123" y="-0.169"/>
+<vertex x="1.123" y="0"/>
+<vertex x="0.837" y="0" curve="-90"/>
+<vertex x="0.655" y="0.182"/>
+<vertex x="0.655" y="0.351"/>
+<vertex x="0.902" y="0.351"/>
+<vertex x="0.902" y="0.247"/>
+<vertex x="1.604" y="0.247"/>
+<vertex x="1.604" y="0.481"/>
+<vertex x="1.383" y="0.481"/>
+<vertex x="1.383" y="0.247"/>
+<vertex x="1.123" y="0.247"/>
+<vertex x="1.123" y="0.481"/>
+<vertex x="0.876" y="0.481" curve="-90"/>
+<vertex x="0.655" y="0.702"/>
+<vertex x="0.655" y="1.053" curve="-90"/>
+<vertex x="0.837" y="1.235"/>
+<vertex x="1.123" y="1.235"/>
+<vertex x="1.123" y="1.404"/>
+<vertex x="1.383" y="1.404"/>
+<vertex x="1.383" y="1.235"/>
+<vertex x="1.682" y="1.235" curve="-90"/>
+<vertex x="1.851" y="1.066"/>
+<vertex x="1.851" y="0.884"/>
+<vertex x="1.604" y="0.884"/>
+<vertex x="1.604" y="0.988"/>
+<vertex x="0.902" y="0.988"/>
+<vertex x="0.902" y="0.728"/>
+<vertex x="1.123" y="0.728"/>
+<vertex x="1.123" y="0.988"/>
+<vertex x="1.383" y="0.988"/>
+<vertex x="1.383" y="0.728"/>
+<vertex x="1.695" y="0.728" curve="-90"/>
+<vertex x="1.851" y="0.572"/>
+<vertex x="1.851" y="0.182" curve="-90"/>
+<vertex x="1.669" y="0"/>
+<vertex x="1.383" y="0"/>
+</polygon>
+<polygon width="0" layer="21">
+<vertex x="10.979" y="-0.31"/>
+<vertex x="10.979" y="-0.06"/>
+<vertex x="12.129" y="-0.06"/>
+<vertex x="12.129" y="-0.31"/>
+</polygon>
+</package>
 </packages>
 <symbols>
 <symbol name="SWITCH">
@@ -557,6 +996,26 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <text x="-20.32" y="22.86" size="1.6764" layer="94" font="vector" ratio="10">&gt;NAME</text>
 <text x="-20.32" y="-25.4" size="1.6764" layer="94" font="vector" ratio="10">&gt;VALUE</text>
 </symbol>
+<symbol name="MAKE-DD_LOGO">
+<rectangle x1="1.6" y1="4.4" x2="3.6" y2="6" layer="94"/>
+<rectangle x1="5.2" y1="4.4" x2="7.2" y2="6" layer="94"/>
+<polygon width="0.2" layer="93">
+<vertex x="0.1" y="0.1"/>
+<vertex x="0.1" y="5.9"/>
+<vertex x="7.6" y="5.9"/>
+<vertex x="7.7" y="5.9" curve="-90"/>
+<vertex x="8.7" y="4.9"/>
+<vertex x="8.7" y="0.1"/>
+<vertex x="7.3" y="0.1"/>
+<vertex x="7.3" y="4.5"/>
+<vertex x="5.1" y="4.5"/>
+<vertex x="5.1" y="0.1"/>
+<vertex x="3.7" y="0.1"/>
+<vertex x="3.7" y="4.5"/>
+<vertex x="1.5" y="4.5"/>
+<vertex x="1.5" y="0.1"/>
+</polygon>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="SWITCH_MCTAEF" prefix="SW">
@@ -599,6 +1058,28 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <connect gate="G$1" pin="VDD" pad="12"/>
 <connect gate="G$1" pin="VSS" pad="13"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MAKE-DD_LOGO">
+<gates>
+<gate name="G$1" symbol="MAKE-DD_LOGO" x="0" y="0"/>
+</gates>
+<devices>
+<device name="'REGULAR'" package="MAKE-DD_LOGO">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="'URL'" package="MAKE-DD_LOGO_URL">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="'PROMPT'" package="MAKE-DD_LOGO_PROMPT">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -7161,20 +7642,21 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <part name="RST" library="seb" deviceset="SWITCH_MCTAEF" device=""/>
 <part name="BL/SW2" library="seb" deviceset="SWITCH_MCTAEF" device=""/>
 <part name="SW1" library="seb" deviceset="SWITCH_MCTAEF" device=""/>
-<part name="C3" library="rcl" deviceset="C-EU" device="C0402" value="100nF"/>
+<part name="C1" library="rcl" deviceset="C-EU" device="C0402" value="100nF"/>
 <part name="IC2" library="linear-technology" deviceset="LT1763CS8" device="" technology="-3.3"/>
-<part name="C5" library="SparkFun" deviceset="CAP" device="0805" value="1µF"/>
+<part name="C2" library="SparkFun" deviceset="CAP" device="0805" value="1µF"/>
 <part name="GND4" library="SparkFun" deviceset="GND" device=""/>
-<part name="C6" library="rcl" deviceset="C-EU" device="C0402" value="10nF"/>
+<part name="C3" library="rcl" deviceset="C-EU" device="C0402" value="10nF"/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
 <part name="+3V9" library="supply1" deviceset="+3V3" device=""/>
-<part name="C7" library="SparkFun" deviceset="CAP" device="0805" value="1µF"/>
-<part name="C8" library="rcl" deviceset="C-EU" device="C0402" value="10nF"/>
+<part name="C4" library="SparkFun" deviceset="CAP" device="0805" value="1µF"/>
+<part name="C5" library="rcl" deviceset="C-EU" device="C0402" value="10nF"/>
 <part name="IC1" library="seb" deviceset="LPC81X" device=""/>
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
 <part name="GND1" library="SparkFun" deviceset="GND" device=""/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="M10" device="&quot;"/>
 <part name="JP2" library="SparkFun-Connectors" deviceset="M10" device="&quot;"/>
+<part name="U$1" library="seb" deviceset="MAKE-DD_LOGO" device="'PROMPT'"/>
 </parts>
 <sheets>
 <sheet>
@@ -7249,22 +7731,23 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <instance part="SW1" gate="G$1" x="259.08" y="60.96" smashed="yes" rot="MR0">
 <attribute name="NAME" x="255.905" y="64.77" size="1.778" layer="95" rot="MR0"/>
 </instance>
-<instance part="C3" gate="G$1" x="33.02" y="144.78" rot="R180"/>
+<instance part="C1" gate="G$1" x="33.02" y="144.78" rot="R180"/>
 <instance part="IC2" gate="G$1" x="284.48" y="96.52"/>
-<instance part="C5" gate="G$1" x="264.16" y="88.9"/>
+<instance part="C2" gate="G$1" x="264.16" y="88.9"/>
 <instance part="GND4" gate="1" x="264.16" y="76.2"/>
-<instance part="C6" gate="G$1" x="307.34" y="91.44" rot="R180"/>
+<instance part="C3" gate="G$1" x="307.34" y="91.44" rot="R180"/>
 <instance part="P+3" gate="1" x="264.16" y="104.14"/>
 <instance part="+3V9" gate="G$1" x="314.96" y="104.14" smashed="yes">
 <attribute name="VALUE" x="322.58" y="104.14" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="C7" gate="G$1" x="314.96" y="88.9"/>
-<instance part="C8" gate="G$1" x="330.2" y="88.9" rot="R180"/>
+<instance part="C4" gate="G$1" x="314.96" y="88.9"/>
+<instance part="C5" gate="G$1" x="330.2" y="88.9" rot="R180"/>
 <instance part="IC1" gate="G$1" x="175.26" y="83.82"/>
 <instance part="P+1" gate="1" x="261.62" y="152.4" rot="R270"/>
 <instance part="GND1" gate="1" x="294.64" y="149.86" rot="R90"/>
 <instance part="JP1" gate="G$1" x="274.32" y="147.32"/>
 <instance part="JP2" gate="G$1" x="238.76" y="147.32"/>
+<instance part="U$1" gate="G$1" x="353.06" y="35.56"/>
 </instances>
 <busses>
 </busses>
@@ -7273,7 +7756,7 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <segment>
 <wire x1="33.02" y1="137.16" x2="33.02" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="GND3" gate="1" pin="GND"/>
-<pinref part="C3" gate="G$1" pin="1"/>
+<pinref part="C1" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <wire x1="243.84" y1="40.64" x2="254" y2="40.64" width="0.1524" layer="91"/>
@@ -7310,10 +7793,10 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <pinref part="IC2" gate="G$1" pin="GND@1"/>
 <pinref part="IC2" gate="G$1" pin="GND@2"/>
 <pinref part="IC2" gate="G$1" pin="GND@3"/>
-<pinref part="C5" gate="G$1" pin="2"/>
+<pinref part="C2" gate="G$1" pin="2"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<pinref part="C7" gate="G$1" pin="2"/>
-<pinref part="C8" gate="G$1" pin="1"/>
+<pinref part="C4" gate="G$1" pin="2"/>
+<pinref part="C5" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <wire x1="200.66" y1="86.36" x2="213.36" y2="86.36" width="0.1524" layer="91"/>
@@ -7338,15 +7821,6 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 </net>
 <net name="0" class="0">
 <segment>
-<wire x1="276.86" y1="40.64" x2="269.24" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="269.24" y1="40.64" x2="269.24" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="269.24" y1="40.64" x2="264.16" y2="40.64" width="0.1524" layer="91"/>
-<junction x="269.24" y="40.64"/>
-<pinref part="R1" gate="G$1" pin="1"/>
-<pinref part="RST" gate="G$1" pin="2"/>
-<label x="271.78" y="40.64" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="294.64" y1="147.32" x2="284.48" y2="147.32" width="0.1524" layer="91"/>
 <label x="294.64" y="147.32" size="1.778" layer="95" rot="MR0"/>
 <pinref part="JP1" gate="G$1" pin="8"/>
@@ -7367,6 +7841,11 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <wire x1="149.86" y1="71.12" x2="142.24" y2="71.12" width="0.1524" layer="91"/>
 <label x="142.24" y="71.12" size="1.778" layer="95"/>
 <pinref part="IC1" gate="G$1" pin="PIO0_11"/>
+</segment>
+<segment>
+<wire x1="347.98" y1="142.24" x2="337.82" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="D2" gate="G$1" pin="C"/>
+<label x="340.36" y="142.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="2" class="0">
@@ -7404,6 +7883,15 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <label x="142.24" y="91.44" size="1.778" layer="95"/>
 <pinref part="IC1" gate="G$1" pin="RESET/PIO0_5"/>
 </segment>
+<segment>
+<wire x1="276.86" y1="40.64" x2="269.24" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="269.24" y1="40.64" x2="269.24" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="269.24" y1="40.64" x2="264.16" y2="40.64" width="0.1524" layer="91"/>
+<junction x="269.24" y="40.64"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="RST" gate="G$1" pin="2"/>
+<label x="271.78" y="40.64" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
@@ -7415,7 +7903,7 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <junction x="264.16" y="99.06"/>
 <pinref part="IC2" gate="G$1" pin="!SHDN"/>
 <pinref part="IC2" gate="G$1" pin="IN"/>
-<pinref part="C5" gate="G$1" pin="1"/>
+<pinref part="C2" gate="G$1" pin="1"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
 </segment>
 <segment>
@@ -7439,13 +7927,6 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <segment>
 <pinref part="D2" gate="G$1" pin="A"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="012" class="0">
-<segment>
-<wire x1="347.98" y1="142.24" x2="337.82" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="D2" gate="G$1" pin="C"/>
-<label x="340.36" y="142.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="12" class="0">
@@ -7478,14 +7959,7 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <wire x1="297.18" y1="86.36" x2="307.34" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="307.34" y1="86.36" x2="307.34" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="BYP"/>
-<pinref part="C6" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="014" class="0">
-<segment>
-<wire x1="337.82" y1="132.08" x2="347.98" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="D1" gate="G$1" pin="C"/>
-<label x="340.36" y="132.08" size="1.778" layer="95"/>
+<pinref part="C3" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="3" class="0">
@@ -7548,7 +8022,7 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <segment>
 <wire x1="33.02" y1="154.94" x2="33.02" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
-<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="C1" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="297.18" y1="99.06" x2="307.34" y2="99.06" width="0.1524" layer="91"/>
@@ -7564,10 +8038,10 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <junction x="314.96" y="93.98"/>
 <pinref part="IC2" gate="G$1" pin="OUT"/>
 <pinref part="IC2" gate="G$1" pin="SENSE"/>
-<pinref part="C6" gate="G$1" pin="2"/>
+<pinref part="C3" gate="G$1" pin="2"/>
 <pinref part="+3V9" gate="G$1" pin="+3V3"/>
-<pinref part="C7" gate="G$1" pin="1"/>
-<pinref part="C8" gate="G$1" pin="2"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<pinref part="C5" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <wire x1="200.66" y1="81.28" x2="213.36" y2="81.28" width="0.1524" layer="91"/>
@@ -7597,6 +8071,11 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <pinref part="IC1" gate="G$1" pin="PIO0_9/XTALOUT"/>
 <wire x1="200.66" y1="71.12" x2="210.82" y2="71.12" width="0.1524" layer="91"/>
 <label x="203.2" y="71.12" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="337.82" y1="132.08" x2="347.98" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="D1" gate="G$1" pin="C"/>
+<label x="340.36" y="132.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="1" class="0">
