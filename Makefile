@@ -1,7 +1,7 @@
 OPTIMIZATION = s
 
 # lpc810 / lpc811 / lpc812
-MCU=lpc812
+MCU=lpc811
 
 #########################################################################
 PROJECT=template

@@ -100,13 +100,15 @@
 //   </h>
 // </e>
 */
-#define CLOCK_SETUP           0
+
+//configuration for 30Mhz SystemClock using IRC
+#define CLOCK_SETUP           1
 #define SYSOSCCTRL_Val        0x00000000              // Reset: 0x000
 #define WDTOSCCTRL_Val        0x00000000              // Reset: 0x000
-#define SYSPLLCTRL_Val        0x00000042              // Reset: 0x000
-#define SYSPLLCLKSEL_Val      0x00000001              // Reset: 0x000
+#define SYSPLLCTRL_Val        0x00000024              // Reset: 0x000
+#define SYSPLLCLKSEL_Val      0x00000000              // Reset: 0x000
 #define MAINCLKSEL_Val        0x00000003              // Reset: 0x000
-#define SYSAHBCLKDIV_Val      0x00000001              // Reset: 0x001
+#define SYSAHBCLKDIV_Val      0x00000002              // Reset: 0x001
 
 /*
 //-------- <<< end of configuration section >>> ------------------------------
@@ -255,7 +257,6 @@ void SystemInit (void) {
   LPC_SYSCON->SYSAHBCLKCTRL |= ( (0x1 << 7) | (0x1 << 18) );
 	
 #if (CLOCK_SETUP)                                 /* Clock Setup              */
-  volatile uint32_t i;
 
 #if ((SYSPLLCLKSEL_Val & 0x03) == 1)
   LPC_IOCON->PIO0_8 &= ~(0x3 << 3);
@@ -263,12 +264,12 @@ void SystemInit (void) {
   LPC_SWM->PINENABLE0 &= ~(0x3 << 4);
   LPC_SYSCON->PDRUNCFG     &= ~(0x1 << 5);        /* Power-up System Osc      */
   LPC_SYSCON->SYSOSCCTRL    = SYSOSCCTRL_Val;
-  for (i = 0; i < 200; i++) __NOP();
+  for (volatile uint32_t i = 0; i < 200; i++) __NOP();
 #endif
 #if ((SYSPLLCLKSEL_Val & 0x03) == 3)
   LPC_IOCON->PIO0_1 &= ~(0x3 << 3);
   LPC_SWM->PINENABLE0 &= ~(0x1 << 7);
-  for (i = 0; i < 200; i++) __NOP();
+  for (volatile uint32_t i = 0; i < 200; i++) __NOP();
 #endif
 
   LPC_SYSCON->SYSPLLCLKSEL  = SYSPLLCLKSEL_Val;   /* Select PLL Input         */
@@ -283,7 +284,7 @@ void SystemInit (void) {
 #if (((MAINCLKSEL_Val & 0x03) == 2) )
   LPC_SYSCON->WDTOSCCTRL    = WDTOSCCTRL_Val;
   LPC_SYSCON->PDRUNCFG     &= ~(0x1 << 6);        /* Power-up WDT Clock       */
-  for (i = 0; i < 200; i++) __NOP();
+  for (volatile uint32_t i = 0; i < 200; i++) __NOP();
 #endif
 
   LPC_SYSCON->MAINCLKSEL    = MAINCLKSEL_Val;     /* Select PLL Clock Output  */

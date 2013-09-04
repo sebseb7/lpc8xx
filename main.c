@@ -21,21 +21,24 @@ void delay_ms(uint32_t ms) {
 	while ((msTicks-now) < ms);
 }
 
-#define LED 7        
+#define LED1 9        
+#define LED2 11        
 
 int main(void) {
 
-	SysTick_Config(12000);// 12Mhz / 1000
+	SysTick_Config(SystemCoreClock / 1000);
 
 
-	LPC_GPIO_PORT->DIR0 |= 1<<LED;    // set pin as output
+	LPC_GPIO_PORT->DIR0 |= (1<<LED1)|(1<<LED2);    // set pins as output
 
 	while (1)
 	{
-		LPC_GPIO_PORT->SET0 = 1<<LED;    // LED output high
-		delay_ms(50);
-		LPC_GPIO_PORT->CLR0 = 1<<LED;    // LED output low
-		delay_ms(200);
+		LPC_GPIO_PORT->SET0 = 1<<LED1;    // LED1 output high
+		LPC_GPIO_PORT->CLR0 = 1<<LED2;    // LED2 output low
+		delay_ms(1000);
+		LPC_GPIO_PORT->CLR0 = 1<<LED1;    // LED1 output low
+		LPC_GPIO_PORT->SET0 = 1<<LED2;    // LED2 output high
+		delay_ms(1000);
 	}
 
 }
