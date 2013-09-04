@@ -13,8 +13,8 @@ template project with makefile, flash script and eval board.
 
 * Cortex-M0+ Core
 * 30 Mhz
-* 16kb flash
-* 4kb RAM
+* 16kb flash (lpc811: 8kb)
+* 4kb RAM (lpc811: 2kb)
 * USART Bootloader and SerialWireDebugging ( make debug )
 * ROM drivers for USART, i2c and power profiles
 * 14 hihgly configurable GPIO Pins (you can connect UART, I2C and SPI to any pin)
