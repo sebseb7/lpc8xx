@@ -20,6 +20,7 @@ template project with makefile, flash script and eval board.
 * 14 hihgly configurable GPIO Pins (you can connect UART, I2C and SPI to any pin)
 * 3 * USART , 2 * SPI , 1 * I2C
 * internal RC with 1% accuracy
+* while(1); @ 30 Mhz ==> 5.5mA
 
 - - -
 
