@@ -39,9 +39,6 @@ int main(void) {
 		LPC_GPIO_PORT->CLR0 = 1<<LED1;    // LED1 output low
 		LPC_GPIO_PORT->SET0 = 1<<LED2;    // LED2 output high
 		delay_ms(1000);
-		LPC_GPIO_PORT->SET0 = 1<<LED1;    // LED1 output high
-		LPC_GPIO_PORT->SET0 = 1<<LED2;    // LED2 output high
-		delay_ms(3000);
 	}
 
 }
